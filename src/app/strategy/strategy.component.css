@@ -1,0 +1,13 @@
+.component {
+  padding: 1em;
+}
+.component-content {
+  border: 1px solid lightgray;
+}
+.title {
+  padding: 1em;
+  border-bottom: 1px solid lightgray;
+}
+.content {
+  padding: 1em;
+}
