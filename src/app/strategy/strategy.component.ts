@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ArgumentOutOfRangeError } from 'rxjs';
+import { MsgService } from '../comunication/comunication.module';
 
 @Component({
   selector: 'app-strategy',
   templateUrl: './strategy.component.html',
-  styleUrls: ['./strategy.component.css']
+  styleUrls: ['./strategy.component.scss', '../app.component.scss']
 })
 export class StrategyComponent implements OnInit {
   public msgService: MsgService;
@@ -30,18 +30,8 @@ export class StrategyComponent implements OnInit {
   public ngOnInit() {}
 }
 
-class MsgService {
-  public output = new Array<string>();
-
-  public WriteLine(value: string = '') {
-    this.output.push(value);
-  }
-}
-
 abstract class Kaczka {
   protected msgService: MsgService;
-  protected constructor() {}
-
   protected latanieInterfejs: LatanieInterfejs;
   protected kwakanieInterfejs: KwakanieInterfejs;
 
@@ -84,6 +74,7 @@ class DzikaKaczka extends Kaczka {
     this.kwakanieInterfejs = new Kwacz(this.msgService);
     this.latanieInterfejs = new LatamBoMamSkrzydla(this.msgService);
   }
+
   public wyswietl() {
     this.msgService.WriteLine('Jestem prawdziwa Dzika Kaczka');
   }
@@ -97,6 +88,7 @@ class ModelKaczki extends Kaczka {
     this.kwakanieInterfejs = new Kwacz(this.msgService);
     this.latanieInterfejs = new NieLatam(this.msgService);
   }
+
   public wyswietl() {
     this.msgService.WriteLine('Jestem modelem kaczki');
   }
@@ -104,6 +96,7 @@ class ModelKaczki extends Kaczka {
 
 class Kwacz implements KwakanieInterfejs {
   public constructor(private msgService: MsgService) {}
+
   public kwacz() {
     this.msgService.WriteLine('Kwa! Kwa!');
   }
@@ -111,6 +104,7 @@ class Kwacz implements KwakanieInterfejs {
 
 class NieKwacz implements KwakanieInterfejs {
   public constructor(private msgService: MsgService) {}
+
   public kwacz() {
     this.msgService.WriteLine('<<< cisza >>>');
   }
@@ -118,6 +112,7 @@ class NieKwacz implements KwakanieInterfejs {
 
 class Piszcz implements KwakanieInterfejs {
   public constructor(private msgService: MsgService) {}
+
   public kwacz() {
     this.msgService.WriteLine('Piszcze!');
   }
@@ -125,6 +120,7 @@ class Piszcz implements KwakanieInterfejs {
 
 class LatamBoMamSkrzydla implements LatanieInterfejs {
   public constructor(private msgService: MsgService) {}
+
   public lec() {
     this.msgService.WriteLine('O rany! Latam!');
   }
@@ -132,6 +128,7 @@ class LatamBoMamSkrzydla implements LatanieInterfejs {
 
 class NieLatam implements LatanieInterfejs {
   public constructor(private msgService: MsgService) {}
+
   public lec() {
     this.msgService.WriteLine('Nie umiem latac!');
   }
@@ -139,6 +136,7 @@ class NieLatam implements LatanieInterfejs {
 
 class LotZNapedemRakietowym implements LatanieInterfejs {
   public constructor(private msgService: MsgService) {}
+
   public lec() {
     this.msgService.WriteLine('Uuuuuaaaa! Lot z napedem rakietowym!');
   }
