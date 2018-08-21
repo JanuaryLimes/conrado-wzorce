@@ -10,7 +10,7 @@ export class ComunicationModule {}
 export class MsgService {
   public output = new Array<string>();
 
-  public WriteLine(value: string = '') {
+  public WriteLine(value: string = '\n') {
     this.output.push(value);
   }
 }

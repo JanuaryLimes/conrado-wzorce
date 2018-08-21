@@ -4,10 +4,7 @@
       #1 Strategy
     </div>
     <div class="content">
-      <span *ngFor="let message of msgService.output">
-        {{message}}
-        <br/>
-      </span>
+      <pre *ngFor="let message of msgService.output">{{message}}</pre>
     </div>
   </div>
 </div>
