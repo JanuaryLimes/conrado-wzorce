@@ -7,6 +7,7 @@ import { ObserverComponent } from './observer/observer.component';
 import { DecoratorComponent } from './decorator/decorator.component';
 import { FactoryComponent } from './factory/factory.component';
 import { SingletonComponent } from './singleton/singleton.component';
+import { CommandComponent } from './command/command.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SingletonComponent } from './singleton/singleton.component';
     ObserverComponent,
     DecoratorComponent,
     FactoryComponent,
-    SingletonComponent
+    SingletonComponent,
+    CommandComponent
   ],
   imports: [
     BrowserModule
