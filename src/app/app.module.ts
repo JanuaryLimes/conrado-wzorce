@@ -8,6 +8,8 @@ import { DecoratorComponent } from './decorator/decorator.component';
 import { FactoryComponent } from './factory/factory.component';
 import { SingletonComponent } from './singleton/singleton.component';
 import { CommandComponent } from './command/command.component';
+import { AdapterComponent } from './adapter/adapter.component';
+import { FacadeComponent } from './facade/facade.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { CommandComponent } from './command/command.component';
     DecoratorComponent,
     FactoryComponent,
     SingletonComponent,
-    CommandComponent
+    CommandComponent,
+    AdapterComponent,
+    FacadeComponent
   ],
   imports: [
     BrowserModule
