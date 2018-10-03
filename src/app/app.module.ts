@@ -10,6 +10,10 @@ import { SingletonComponent } from './singleton/singleton.component';
 import { CommandComponent } from './command/command.component';
 import { AdapterComponent } from './adapter/adapter.component';
 import { FacadeComponent } from './facade/facade.component';
+import { TemplateMethodComponent } from './template-method/template-method.component';
+import { TemplateMethodElementComponent } from './template-method/template-method-element/template-method-element.component';
+import { InBtnDirective } from './template-method/template-method-element/in-btn.directive';
+import { InButtonComponent } from './template-method/template-method-element/in-button/in-button.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +25,15 @@ import { FacadeComponent } from './facade/facade.component';
     SingletonComponent,
     CommandComponent,
     AdapterComponent,
-    FacadeComponent
+    FacadeComponent,
+    TemplateMethodComponent,
+    TemplateMethodElementComponent,
+    InBtnDirective,
+    InButtonComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [InButtonComponent]
 })
-export class AppModule { }
+export class AppModule {}
