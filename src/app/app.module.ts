@@ -15,6 +15,7 @@ import { TemplateMethodElementComponent } from './template-method/template-metho
 import { InBtnDirective } from './template-method/template-method-element/in-btn.directive';
 import { InButtonComponent } from './template-method/template-method-element/in-button/in-button.component';
 import { IteratorAndCompositeComponent } from './iterator-and-composite/iterator-and-composite.component';
+import { StateComponent } from './state/state.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { IteratorAndCompositeComponent } from './iterator-and-composite/iterator
     TemplateMethodElementComponent,
     InBtnDirective,
     InButtonComponent,
-    IteratorAndCompositeComponent
+    IteratorAndCompositeComponent,
+    StateComponent
   ],
   imports: [BrowserModule],
   providers: [],
