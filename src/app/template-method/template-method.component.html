@@ -1,0 +1,12 @@
+<div class="component">
+  <div class="component-content">
+    <div class="title">
+      #8 Template Method
+    </div>
+    <div class="content">
+      <ng-template ngFor let-msgItem [ngForOf]="classReference.msgService.output">
+        <app-template-method-element [msgItem]="msgItem" [msgService]="classReference.msgService"></app-template-method-element>
+      </ng-template>
+    </div>
+  </div>
+</div>
