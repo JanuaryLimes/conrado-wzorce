@@ -49,20 +49,25 @@ class Math implements IMath {
 class MathProxy implements IMath {
   private math: Math;
 
-  public constructor() {
-    this.math = new Math();
+  private getMath(): Math {
+    if (!this.math) {
+      this.math = new Math();
+    }
+    return this.math;
   }
 
+  public constructor() {}
+
   public add(x: number, y: number) {
-    return this.math.add(x, y);
+    return this.getMath().add(x, y);
   }
   public sub(x: number, y: number) {
-    return this.math.sub(x, y);
+    return this.getMath().sub(x, y);
   }
   public mul(x: number, y: number) {
-    return this.math.mul(x, y);
+    return this.getMath().mul(x, y);
   }
   public div(x: number, y: number) {
-    return this.math.div(x, y);
+    return this.getMath().div(x, y);
   }
 }
