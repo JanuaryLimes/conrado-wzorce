@@ -16,6 +16,7 @@ import { InBtnDirective } from './template-method/template-method-element/in-btn
 import { InButtonComponent } from './template-method/template-method-element/in-button/in-button.component';
 import { IteratorAndCompositeComponent } from './iterator-and-composite/iterator-and-composite.component';
 import { StateComponent } from './state/state.component';
+import { ProxyComponent } from './proxy/proxy.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { StateComponent } from './state/state.component';
     InBtnDirective,
     InButtonComponent,
     IteratorAndCompositeComponent,
-    StateComponent
+    StateComponent,
+    ProxyComponent
   ],
   imports: [BrowserModule],
   providers: [],
